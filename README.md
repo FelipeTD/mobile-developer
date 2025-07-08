@@ -54,14 +54,30 @@
 
 ### Instalando Ambiente de Desenvolvimento Node.js
 - Instalando o ambiente NodeJS
-
+    - O que precisa ter para instalar o NodeJS
 - Instalando seu Editor de código
-
+    - Editor de código trás algumas facilidades
+    - Será utilizado o VSCode
+    - code.visualstudio.com
+    - Configurações de visualização do VSCode
 - Instalando o Node e o NPM
-
+    - nodejs.org
+    - o npm já vem junto com o node
+    - node -v e npm -v
 - Seu primeiro ola mundo
+    - Verificando se está tudo funcionando
+    - node hello.js (comando)
 
 ### Inicializando Projetos Node.js
+- Introdução
+
+- Inicializando projetos com o NPM
+
+- Como executar projetos node
+
+- Terminal para Devs NodeJS
+
+- Conclusão
 
 ### Versionamento de Código com Git e Github
 - Curso já realizado
