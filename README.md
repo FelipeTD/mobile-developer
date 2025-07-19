@@ -70,14 +70,37 @@
 
 ### Inicializando Projetos Node.js
 - Introdução
+    - Entendendo node e npm
+    - package.json faz o empacotamento das configurações do projeto
 
 - Inicializando projetos com o NPM
+    - Um projeto node precisa de um arquivo package.json
+    - npm init para começar um novo projeto
+    - npm init -y para colocar tudo padrão
+    - A propriedade main é onde está o arquivo principal da aplicação
+    - A propriedade scripts é onde ficam as automações do projeto
 
 - Como executar projetos node
+    - Criar src para salvar os arquivos do projeto
+    - Comando para rodar um projeto node. node src/index.js
+    - Outro comando para rodar um projeto node. node --watch src/index.js
 
 - Terminal para Devs NodeJS
+    - Comando de terminal
+        - del * (deleta arquivos)
+        - ls (lista arquivos)
+        - cls ou clear (limpa o terminal)
+        - cd (muda o diretorio)
+        - mkdir (cria um diretorio)
+        - code (abre o VSCode)
+        - Todos os comandos pode ser feitos pelo próprio VSCode
+    - Comandos de node
+        - npm init -y (inicia um projeto node)
+        - node [arquivo] (executa um arquivo)
+        - node --watch [arquivo] (executa um arquivo e fica escutando alterações)
 
 - Conclusão
+    - Conhecimentos básicos de projetos nodeJS
 
 ### Versionamento de Código com Git e Github
 - Curso já realizado
