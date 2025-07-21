@@ -109,6 +109,90 @@
 - Curso já realizado
 
 ### Simulador de corridas do Mario Kart com Node.js
+- Introdução
+    - Analisar lógica de programação
+    - Utilizar para mostrar um overview do javascript
+    - Entender como um pacote básico do node funciona
+
+- Regras de negócio
+    - Todas as premissas serão utilizadas em projetos reais
+    - Algumas condições para a corrida
+
+- Demonstração
+    - Mostrando como o jogo funciona
+    - Tem muita regra que não está especificada nas regras de negócio
+    - Ao ignorar a primeira rodada com confronto fica uma lógica injusta
+
+- Setup
+    - Baixando imagens e inicianlizando o package.json
+
+- Objetos
+    - Criando jogadores em objetos
+    - Faltou uma parte para selecionar personagens
+
+- Roll Dice (Async Functions)
+    - Criando o método para simular um dado
+    - NodeJS é sincrono
+    - Conceito de async
+
+- Main (Auto Invoke)
+    - Criando função main 
+    - Chama todas as outras funções
+    - Função autoinvocavel 
+
+- Start (Template String)
+    - Usando valores de objetos
+    - Interpolação de strings
+
+- Race Engine (Functions Chains)
+    - Funções podem chamar outras funções
+    - Encadeamento de funções (await)
+
+- Rounds (For)
+    - Criando um FOR
+
+- Blocks (Switch Case)
+    - Usando switch case para definir um bloco
+
+- Convenções
+    - Rodando dois dados com os valores dos jogadores
+    - Alt + Shift + Baixo (duplica uma linha)
+    - CamelCase
+
+- Testando Blocos (If)
+    - Criando 3 IFs
+
+- Escopo de variaveis
+    - Mostrando escopo de variaveis
+    - Uma variavel criada dentro de um IF só existe dentro do IF
+
+- Log Roll (Encapsulate)
+    - Deu um exemplo bem ruim para código que se repete
+    - Poderia colocar depois do switch case
+
+- Javascript Expressions
+    - Cheio de erros no código nessa aula
+    - Correção de vários erros para o código funcionar corretamente
+    - Expressões em javascript para somar valores
+
+- Winner (Else If's)
+    - Colocando mais IFs para definir quem ganhou a rodada
+
+- Diminuindo Ifs (If Ternario)
+    - Explicou o if ternario o que deixou mais complexo a explicação
+    - Poderia ter utilizado um early return caso seja possível no javascript
+    - Existe alguns erros no código para quando da empate em rodadas que não são confronto
+    - Não é exibida nenhuma mensagem
+
+- Condição Dupla (If Combinado)
+    - IF com && para duas condições
+
+- Game Over (Clean Ifs)
+    - Lógica de quem ganhou o jogo
+
+- Conclusão 
+    - Tudo que foi feito durante o desenvolvimento
+    - Senti falta de testes unitários
 
 ### Live de lançamento: Bootcamp meutudo - Mobile Developer
 
