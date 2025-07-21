@@ -195,4 +195,11 @@
     - Senti falta de testes unitários
 
 ### Live de lançamento: Bootcamp meutudo - Mobile Developer
+- Uma apresentação sobre a meuTudo e o objetivo que ela quer alcançar
+- Conversa sobre como deve ser um profissional
+- Tecnicamente o profissional precisa saber tudo
+- Em questão de entrega precisa fazer além da entrega
+- Na carreira precisa fazer um case de projeto por semana no linkedin
+- Vagas estão no linkedin
+- Precisa focar em inglês
 
