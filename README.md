@@ -524,6 +524,7 @@
 - Curso já realizado
 
 ### Classificando clientes e valores com javascript
+- Essa ultima parte é um desafio que pode ser feito dentro do proprio site
 
 
 
