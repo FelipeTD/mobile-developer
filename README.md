@@ -342,5 +342,188 @@
     - Item controlador (index.js)
     - Esses conceitos podem ser utilizado em várias linguagens
 
+## Gerenciando Pacotes com nodeJS com NPM
+
+### Gerenciando pacotes com node
+- Introdução
+    - Pacotes, dependencias e NPM
+    - Precisa de conceitos básicos de node
+
+- Teoria sobre pacotes e dependencias
+    - Node Package Manager (Gerenciador de Pacotes do Node)
+    - Pacotes são codigos que podem ser utilizados em projetos diferentes
+    - Centralizamos o código para se tiver alguma atualização, todos os projetos terão o código atualizado
+    - Quando um pacote está sendo utilizado em outro projeto ele se torna uma dependência do projeto que está utilizando ele
+    - NPM é o gerenciador de pacotes onde os pacotes ficam guardados e podem ser baixados e utilizados
+    - O repositorio é o npmjs.com
+    - Existem dois tipos de pacotes. Os utilizados para desenvolvimento e o que vai ser utilizado pelo cliente final
+    - Quando for publicar a aplicação será levado somente as dependencias do cliente final para deixar o pacote mais leve
+    - NuGet funciona da mesma forma (.NET)
+    - Maven e Gradle (Java)
+    - PIP (Python)
+    - YARN é uma alternativa ao NPM (Não é muito bom)
+    - PNPM é outra alternativa (Não é muito bom)
+    - Mostrou várias bibliotecas que podem ser utilizadas no desenvolvimento
+
+- Prática
+    - Criando projeto para trabalhar com npm
+    - npm install chalk
+    - Criou um package-lock.json
+    - Atualizou o package.json
+    - Criou o node_modules
+    - Tomar cuidado pois node_modules pode se tornar uma pasta muito grande
+    - package-lock.json é utilizado para o node controlar as versões de pacotes
+    - Explicando o .gitignore para não mandar o node_modules
+    - npm install ou npm i (quando baixar um projeto para instalar todas as dependencias)
+    - Usando as dependências que baixamos
+    - Sempre olhe a documentação da dependência para entender como ela funciona
+    - Ensinando como colocar uma dependência em ambiente de desenvolvimento
+    - npm install nome_dependencia -D
+    - Para desinstalar npm uninstall log-symbols
+    - npm fund lista de onde está vindo todas as dependências do projeto
+    - npm update nome_dependencia atualiza a versão do pacote para a mais atual
+    - Sempre converse com a liderança antes de atualizar os pacotes
+    - É importante atualizar pacotes para evitar invasão de sistemas
+
+- Conclusão
+    - NPM é o seu amigo para gerenciar pacotes no seu projeto
+
+### NPM Scripts em nodeJS
+- Introdução
+    - Automação de comandos com npm scripts
+    - Precisa saber conceitos básicos de node e npm
+    - Utilizado para maior produtividade
+
+- Prática
+    - Criando novo projeto para estudar npm scripts
+    - Identificar os scripts de um projeto
+    - É onde está escrito "scripts"
+    - Para executar um script execute no terminal npm run nome_script
+    - Tem como executar colocando o mouse em cima do nome e clicar em run script
+    - Nos três pontos do lado esquerdo superior tem uma opção de habilitar o npm scripts
+    - Vai abrir uma parte de npm scripts nos menus da esquerda abaixo de timeline
+    - Criando um script "iniciar": "node src/index.js"
+    - Script multi task
+    - "iniciar": "node src/index.js && mkdir dist"
+    - Scripts comuns em projetos reais
+    - É interessante quando o projeto tem muitas configurações para iniciar
+    - Guidelines de scripts
+        - start
+        - dev
+        - build
+        - test
+        - test:watch
+        - test:coverage
+        - lint
+        - lint:fix
+        - format
+        - clean
+        - precommit
+        - deploy
+        - analyze
+
+- Conclusão
+    - Conteudo bem rápido
+    - Explicou o básico de npm scripts
+
+### Gerenciando variaveis de ambientes com NPM
+- Introdução
+    - Variaveis de ambiente são importantes para segurança do projeto
+    - Conceitos básicos de nodeJS, npm e npm scripts
+
+- Teoria sobre variaveis de ambiente
+    - Utilizar um ambiente fora do projeto para se alguém conseguir acessar seu projeto não consiga nenhum dado sensivel
+    - Esses dados são salvos num arquivo .env
+    - Os dados de DEV e HML podem ser passados para os desenvolvedores
+    - Os dados de produção geralmente poucas pessoas tem acesso
+
+- Prática
+    - Criando novo projeto para estudar envs
+    - Case de problema de conexão de banco de dados
+    - Mostrando como seria feito com envs
+    - Como definir valores no arquivo .env
+    - USER_DATABASE="naruto"
+    - Para usar as envs precisa atualizar o comando "start": "node --env-file=.env --watch src/index.js"
+    - process.env.NOME_VARIAVEL
+    - O exemplo foi ruim porque continuou funcionando para produção
+    - Antigamente utilizava um package para conseguir utilizar um .env
+
+- Conclusão
+    - Geralmente quando se entra numa empresa as pessoas te passam um arquivo .env para configurar o projeto localmente
+
+### Criando um gerador de QR codes para e-commerces com nodeJS
+- O que vou aprender
+    - QR Code com pacotes pronto do node
+
+- Pré-requisitos
+    - Lógica de programação
+    - Javascript
+    - NodeJS
+    - NPM
+    - .env
+
+- Resultado final
+    - Demonstração do resultado final
+
+- Setup
+    - Criando o projeto para estudar qrcode no nodeJS
+
+- Import prompt
+    - Configurando interação com o terminal para adicionar dados ao terminal
+    - Instalando o prompt
+
+- Main prompt
+    - Configuração do prompt para escolha de senha ou qrcode
+
+- Usage chalk
+    - Só para deixar as mensagens com mais vida
+
+- Qr-code architeture
+    - Arquivos necessários para qrcode
+    - qrcode terminal
+    - Organização dos arquivos para o qrCode
+
+- Qr-code generate
+    - 15 minutos de video pelo amor de deus
+    - Implementando a geração de qrCode
+    - Criando um handle para lidar com o código
+    - Ficou bem espalhado os arquivos
+
+- Password create
+    - Criando serviço para criar password
+
+- Password generator
+    - 12 minutos de video para criar uma senha
+    - Implementando logica de geração de password
+    - Criando um handle para lidar com o código
+    - Coloca tudo num array e depois usa um random para criar uma senha
+
+- App run
+    - Testando o aplicativo
+
+- Refactoring
+    - Dicas de refatoração
+    - 14 minutos de rafatoração não é possível
+    - Indicou o livro refatoração
+    - O código está correto mas pode ser melhorado
+    - Tente fazer o código funcionar primeiro e depois melhore
+    - Arquivos curtos
+    - Todo projeto precisa de um padrão para as pastas
+    - Padronização de nomes
+    - Refatoração não interfere em nada em performance, está relacionado com organização
+    - Tratamento de erros
+
+- Archteture
+    - A arquitetura deve ser vista primeiro antes do código
+    - Explicando em desenho como o projeto foi divido em camadas
+
+- Conclusão
+    - O código pode ser melhorado
+
+### Desafios de código: Aperfeiçoe sua logica e pensamento computacional
+- Curso já realizado
+
+### Classificando clientes e valores com javascript
+
 
 
