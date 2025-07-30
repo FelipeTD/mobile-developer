@@ -526,5 +526,37 @@
 ### Classificando clientes e valores com javascript
 - Essa ultima parte é um desafio que pode ser feito dentro do proprio site
 
+## Typescript para Devs nodeJS
+
+### Introdução a typescript e supersets
+- Introdução
+    - Explicar a relação entre javascript e typescript
+    - Explicação de superset
+    - Pre-requisitos são logica de programação, javascript básico, modularização, npm e npm scripts 
+
+- Teoria
+    - É um pacote adicional ao javascript
+    - Typescript da ao javascript tipagem, interfaces, decorators e muito mais
+    - Onde roda javascript também roda typescript
+    - Traz a maturidade de Java/C# para o javascript
+    - Dentro de um projeto typescript você pode usar javascript sem problemas
+    - A distribuição do projeto é toda em javascript
+    - Transpile é transformar typescript em javascript
+    - Javascript não aponta nenhum erro antes de rodar o projeto
+    - Como typescript tem o tipo do parametro, você recebe um erro antes de executar
+    - type emailOptions = { from: string, to: string }
+    - Existem dois tipos de erro. compiletime e runtime
+    - Projetos pequenos é melhor utilizar javascript puro
+    - Projetos grandes é melhor utilizar typescript
+    - Typescript é mantido pela microsoft
+    - Como muitas empresas grandes utilizam é bom utilizar também
+
+- Conclusão
+    - Entendemos tudo sobre typescript para saber porque utilizar
+
+### Como configurar typescript em projetos nodeJS
+
+### Debugging com nodeJS
+
 
 
