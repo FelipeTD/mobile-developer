@@ -555,6 +555,48 @@
     - Entendemos tudo sobre typescript para saber porque utilizar
 
 ### Como configurar typescript em projetos nodeJS
+- Introdução
+    - Vendo typescript na prática
+    - Configuração feita no tscript
+
+- Prática
+    - Configurando um novo projeto nodeJS
+    - npm install -D typescript
+    - O index.js tem que se transformar em index.ts
+    - No package.json continua sendo um index.js
+    - npx tsc src/index.ts (é uma ordem para o npm para o typescript)
+    - Esse comando transpila o arquivo .ts criando um .js
+    - "dist": "npx tsc src/index.ts",
+    - "start:dev": "npm run dist && node src/index.js"
+    - O problema é que isso cria arquivos duplicados
+    - Também estamos apontando qual arquivo estamos querendo transpilar
+    - npx tsc --init (cria um arquivo de configuração do typescript tsconfig.json)
+    - Precisa ser definido quais configurações serão adicionadas nesse arquivo
+    - Adicionando várias configurações no arquivo
+    - npm install -D tsx (pacote para conseguir rodar arquivos .ts no node)
+    - "start:dev": "tsx src/index.ts"
+    - Adicionando mais configurações no tsconfig
+    - Utilizar site do npm trends para saber quais pacotes estão sendo utilizados
+    - npm i tsup -D (instalação do tsup que é mais rápido para transpilar)
+    - "dist": "tsup src" (comando de build atualizado para utilizar tsup)
+
+- Bônus - Produtividade
+    - Sequência de comandos para criar um projeto typescript
+    - npm init -y
+    - mkdir src
+    - 'console.log("hello")' > src/index.ts (não utilizar pois o arquivo que criou deu erro)
+    - npm i typescript tsx tsup -D
+    - npx tsc --init
+    - Configurar o tsconfig com as configurações básicas
+    - Atualizar o package.json com os scripts que você sempre usa
+    - Lembrar de atualizar o type module
+    - npm init -y typescript (inicia um projeto com template typescript)
+    - Não utilizar tslint
+    - Adicionar arquivo .gitignore
+    - Também precisa adicionar os scripts dentro do package.json
+
+- Conclusão
+    - Muito conteúdo sobre typescript
 
 ### Debugging com nodeJS
 
