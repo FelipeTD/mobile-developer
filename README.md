@@ -599,6 +599,31 @@
     - Muito conteúdo sobre typescript
 
 ### Debugging com nodeJS
+- Introdução
+    - Aprender a fazer debug com nodeJS
+    - Precisa saber tudo que foi ensinado nos modulos anteriores
+
+- Teoria
+    - O termo bug é porque entravam pequenos insetos em valvulas do computador que atrapalhava o processamento e resultado
+    - Depurar é a mesma coisa que debug
+    - É inevitavel bugs acontecerem
+    - Debug pode ser feito em qualquer linguagem
+
+- Prática
+    - Criando um projeto novo para entender debug
+    - Criando um código aleatorio para debug
+    - Configurando modo de debug no vsCode
+    - Para rodar como debug precisa colocar o mouse em cima do nome do script no arquivo package.json e vai aparecer a opção de debug
+    - Explicando onde está cada componente do debug
+    - Explicando o que cada botão faz durante o debug
+    - O VSCode trabalha de forma diferente dependendo da aplicação
+    - Tem como padronizar
+    - O arquivo launch.json são as configurações para quando rodar o modo debug
+    - Delete o conteudo dentro do configurations e clique em Add Configuration e selecione NodeJS Attach to process
+    - Processo ensinado não funcionou. Perguntei para o copilot como faria para corrigir o arquivo e funcionou corretamente
+
+- Conclusão
+    - Será utilizado sempre quando é necessário entender o código e onde está o problema
 
 
 
