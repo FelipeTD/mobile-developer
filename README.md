@@ -625,5 +625,116 @@
 - Conclusão
     - Será utilizado sempre quando é necessário entender o código e onde está o problema
 
+## Introdução a aplicações web
+
+### Como a web funciona?
+- Introdução
+    - Termos sobre programação web (CRUD, micro serviços, monolito, web services)
+    - Pre-requisito é uma linguagem de programação
+
+- Teoria sobre aplicações web
+    - Explicando como a internet funciona do ponto de vista de um programador
+    - Fez uma explicação excelente sobre aplicações
+    - localhost:8080/recurso/acao
+    - localhost:8080 -> casa
+    - recurso -> comodos da casa
+    - acao -> o que você faz dentro de cada comodo
+    - casa/quarto/dormir
+    - casa/cozinha/almocar
+    - casa/sala/jogar
+    - Explicação de como funciona sinais de internet
+    - Não existe nuvem é somente o computador de outra pessoa
+    - Explicação sobre cliente e servidor
+    - Explicação sobre backend e frontend
+
+- Principais termos de aplicações web
+    - Tecnologia é um meio para resolver um problema
+    - Explicação sobre os momentos de uma aplicação
+        - Localhost
+        - Server
+        - Client
+        - Cloud
+    - CRUD (Create, Read, Update e Delete)
+    - Microserviços (Serviços são separados em vários pequenos projetos)
+    - Monolito (Tudo feito dentro de um único lugar )
+    - Web Services (Vários serviços de um mesmo lugar)
+    - Explicação de frameworks e bibliotecas
+        - Springboot + Java
+        - nodeJS + Express
+        - ruby + Ruby on rails
+        - dotnet + aspnet
+    - Repositorio
+        - Local onde fica o código
+        - Deve ser versionado
+        - Github
+        - Bitbucket
+        - Gitlab
+    - Monorepo
+        - Está salvo o frontend e o backend no mesmo projeto
+    - CI e CD
+        - Continuous Integration (Esteira de teste)
+        - Continuous Delivery (Esteira de deploy)
+    - Dominio da aplicação
+        - Qual problema de negocio essa aplicação quer resolver
+        - Domain Driven Design (aplicação modelada a dominio)
+    - Essas definições foram somente para ter uma noção do que irá ser utilizado
+
+### Como funciona HTTP protocol
+- Introdução
+    - Resumo sobre aplicações com HTTP
+    - Conteudo teorico
+    - O HTTP seria uma linguagem universal para comunicação em tecnologia
+
+- Teoria sobre protocolo HTTP
+    - Request e Response
+    - HTTP é uma maneira padronizada de fazer duas aplicações se comunicarem
+    - Request é uma requisição ao servidor
+    - Response é a resposta do servidor
+    - HTTP e HTTPS a diferença é que o S é um protocolo de segurança
+    - Header e Content (Cabeçalho e Conteudo)
+    - Request Methods (GET, POST, PUT, PATCH, DELETE)
+    - Status Code é um codigo de resposta do retorno que foi dado
+    - Utilizado pois existem muitas linguas diferentes
+    - O código todo mundo entende se deu erro ou não
+    - Status Code (200, 201, 400, 404, 500)
+    - 100
+        - Continue
+        - Processing
+    - 200
+        - OK
+        - Created
+        - No content
+    - 300
+        - Não é muito comum
+        - Found
+        - Use Proxy
+    - 400
+        - Bad Request
+        - Not Found
+        - Unauthorized
+        - Forbidden
+    - 500
+        - Internal Server Error
+        - Not Implemented
+        - Bad Gateway
+        - Unavailable
+    - Content
+        - Texto
+        - Código
+        - HTML
+        - XML
+        - JSON
+        - O padrão de APIs é o JSON
+
+### Introdução ao desenvolvimento de API
+- Introdução
+
+- Teoria sobre API
+
+- 
+
+### Monitorando e classificando empréstimos com javascript
+- Essa ultima parte é um desafio que pode ser feito dentro do proprio site
+
 
 
