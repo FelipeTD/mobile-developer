@@ -728,10 +728,46 @@
 
 ### Introdução ao desenvolvimento de API
 - Introdução
+    - Entender o que é API
+    - API é um tipo de aplicação backend
+    - API REST e API RESTFull
 
 - Teoria sobre API
+    - Chave de castelo (uma coisa pequena que desbloqueia uma coisa muito grande)
+    - Application Programming Interface
+    - Interface de Programação de Aplicativos
+    - É um contrato para criação de soluções
+    - O que é?
+        - Backend para serve dados de uma maneira padronizada
+    - Para o que serve?
+        - Receber e processar dados e responder outras aplicações
+    - Como funciona
+        - Utiliza algum padrão de protocolo para servir dados
+    - Ter um protocolo de comunicação rigido (Request e Response)
+    - Sempre serve algum conteudo (Content) seguindo um padrão
+    - Possui padrões de arquitetura (REST)
+    - REST 
+        - Representational State Transfer
+        - Transferência de Estado Representacional
+        - É uma aplicação baseado em contratos que consegue pegar dados e transferir para outro lugar
+    - RESTFul
+        - Baseada em cliente e servidor
+        - Comunicação stateless 
+            - O servidor não armazena nenhuma informação sobre a transferência que foi realizada. 
+            - Os dados são resetados a cada requisição
+        - Cache (Tem a possibilidade de colocar. Não é obrigatorio)
+        - Interface uniforme (Contrato uniforme)
+        - Sistema em camadas (Organizado por pastas onde cada pasta tem sua função)
+        - Quando você respeita essas cinco bases você está aplicando o padrão RestFul
+    - REST x RESTFul
+        - REST segue algumas das bases
+        - RESTFul aplica 100% das bases
+    - É importante saber esses conceitos para entender qual é a melhor solução para um problema
 
-- 
+- Bônus
+    - Abrindo projetos para analisar o padrão REST
+    - Independente da tecnologia os padrões são parecidos
+    - 
 
 ### Monitorando e classificando empréstimos com javascript
 - Essa ultima parte é um desafio que pode ser feito dentro do proprio site
