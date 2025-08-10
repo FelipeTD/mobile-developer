@@ -772,5 +772,113 @@
 ### Monitorando e classificando empréstimos com javascript
 - Essa ultima parte é um desafio que pode ser feito dentro do proprio site
 
+## Criando APIs com nodeJS
+
+### Gerenciador de Podcasts - API NodeJS com typescript e HTTP module
+- Introdução
+    - Criar uma API do zero
+    - Não será utilizado framework
+    - REST, HTTP e nodeJS
+
+- O que vamos fazer
+    - Centralizador de podcasts estilo netflix
+
+- Estruturando a linha de pensamentos
+    - Definindo o que deve ser feito
+
+- Mapeando um problema de negócio
+    - Definindo como deve ser feito
+
+- Arquitetura básica do nosso projeto
+    - Realizando desenho da arquitetura
+    - Ports
+    - Explicando sobre controladores
+    - Request e Response
+    - Services
+    - Repository
+
+- Setup inicial do projeto
+    - Não será utilizado nenhum framework
+    - npm i typescript tsx tsup -D
+    - npx tsc --init
+
+- Criando as camadas iniciais da aplicação
+    - Criando pastas de cada camada
+    - Controllers, Services e Data
+
+- Criando server HTTP na prática
+    - Entendendo como utilizar o pacote HTTP do nodeJS
+    - Precisa baixar a tipagem do pacote HTTP para typescript
+    - Isso pode ser feito com o quick fix do VSCode
+    - Criou algumas variaveis de ambiente
+
+- Criando o controller
+    - Criação do controller PodcastController
+    - Precisa adicionar o controller no servidor
+
+- Chamada para API com simuladores de clients
+    - Testando controller que foi criado
+    - Utilizou o JSON.stringfy
+    - Apresentou o Postman
+    - Também mostrou o ThunderClient
+
+- Criando a service
+    - Serviço continua funcionando da mesma maneira
+    - Foi feita a separação de lógica para a service 
+    - Isso deixa o projeto mais organizado
+
+- Criando um repository
+    - Deixando os dados na camada de dados
+    - Renomeando para repositories
+    - Utilização do fs (file system) e path para ler o json
+    - Criando um contrato do JSON com interface
+
+- Modulo dinamico
+    - Corrigindo o __dirname
+    - Remover do package.json type: module
+
+- Criando o service
+    - Implementando o segundo service
+    - Utilizou um parametro opcional
+
+- Criando rotas
+    - Criando uma rota para saber se tem que ir para o list ou filter
+    - O parametro foi adicionado na mão como flow para teste
+
+- QueryString
+    - Adicionando parametros num controller
+    - Utilizando query string (texto de busca)
+    - Vai ser feito na mão (geralmente frameworks já fazem isso)
+
+- Refatorando camadas
+    - Melhorando a qualidade do projeto sem influenciar no resultado
+
+- Refatorando rotas
+    - Olhando números mágicos e textos flutuantes no código
+    - Criando a pasta rotes (rotas)
+
+- Número mágicos e textos flutuantes
+    - Tipando todos os textos flutuantes e números mágicos da aplicação
+    - Desnecessauro
+
+- Responsabilidade única
+    - Cada arquivo tem que ter apenas 1 responsabilidade
+    - Parece que tem muitos arquivos e pastas
+
+- Tratamento de erro de status code
+    - Quando não retorna dados tem que retornar 204
+
+- Tratamento de erro do segundo status code
+    - Fazendo a mesma coisa com o serviço de listagem
+
+- Tratamento de erro limpeza e renomeação de arquivos
+    - Limpando os arquivos do projeto retirando o que não está sendo utilizado
+
+- Subindo o projeto para o github
+    - Mais 15 minutos para mexer mais ainda no projeto antes de subir para o github
+    - Faça funcionar primeiro e depois melhore o código
+    - Utilizando IA para criar o read.md
+    - Se tivesse feito do zero seria mais rápido do que usar IA
+
 
 
