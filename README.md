@@ -880,5 +880,55 @@
     - Utilizando IA para criar o read.md
     - Se tivesse feito do zero seria mais rápido do que usar IA
 
+### Criando uma minimal API da formula 1 com nodeJS e fastify
+- O que vamos aprender
+    - API minima é um conceito
+    - É um projeto rápido com poucas funcionalidades
+    - Utilizando o framework fastify
 
+- Pré-requisitos
+    - Lógica de programação
+    - Javascript
+    - nodeJS
+    - Typescript
 
+- Utilizando boilerplate
+    - API minimalista não precisa de desenhar a arquitetura
+    - Boilerplate é um projeto base como se fosse um template
+    - Template tem 8 vulnerabilidades
+
+- npm install fastify
+    - Instalando o fastify
+    - npm i fastify
+
+- Create a fast API
+    - Criando uma API com o uso do fastify
+    - const server = fastify({ logger: true });
+    - Poucas configurações para criar um endpoint
+
+- Criando meus endpoints
+    - Criando o outro método
+    - Fez em menos de 5 minutos
+
+- Filter Driver
+    - Recuperando parametros da requisição e filtrando
+    - Utilizando um route param
+    - Parametrização na rota
+    - Conversão de string para int
+    - A vantagem da API minima é que você consegue subir as coisas rápidas
+    - A desvantagem é a falta de organização
+
+- Incrementando dados
+    - A partir do momento que você cria mais camadas deixa de ser uma minimal API
+    - Abordagem e framework são coisas diferentes
+    - Usou IA novamente para criar mais dados para a lista de times
+
+- Cors
+    - Configuração de Cors para conseguir ser consumida
+    - Controle de quem pode consumir sua API
+    - npm i @fastify/cors
+    - Sempre acontece esse erro quando vai chamar a API
+
+- Conclusão
+    - Resumo de criação de API é mais rápido com framework
+    - A diferença entre usar framework ou não é bem grande
