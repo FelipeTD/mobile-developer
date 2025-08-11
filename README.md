@@ -932,3 +932,162 @@
 - Conclusão
     - Resumo de criação de API é mais rápido com framework
     - A diferença entre usar framework ou não é bem grande
+
+### Recriando a API da champions league com nodeJS e express
+- Introdução
+    - Foi bem chato fazer 3 projeto em sequência mesmo
+    - Bomba Patch existe até hoje
+    - Mais um projeto de API do pokemon só que com nome dos jogadores
+    - Será utilizado frameworks
+
+- Pré-requisitos
+    - Lógica de programação
+    - Javascript
+    - nodeJS
+    - Typescript
+
+- Entendendo o problema
+    - Primeira coisa que deve ser feito é entender o que precisa ser feito
+    - Dominio da aplicação sobre os jogadores da champions
+    - Precisa ser feito um CRUD dos jogadores
+
+- Arquitetura - Camada controllers e services
+    - Desenho da arquitetura para entender o projeto
+    - Arquitetura várias camadas
+    - Definindo camadas de controller e services
+    - Pode-se ter uma mesma URL desde que o verbo HTTP seja diferente
+    - Foram gerados 5 serviços para jogadores
+    - Apenas 1 serviço para clubes para retornar os clubes
+    - Mudança de banco de dados quase nunca acontece em cenários do mundo real
+
+- Arquitetura - Camada repositories
+    - Criando os métodos necessários para atender aos serviços
+    - Referência ao código limpo
+    - Programe códigos que todos entendam
+
+- Arquitetura - Camada models
+    - Muito tempo gasto para explicar um CRUD
+    - Colocou o server, app e routes no desenho
+    - Adicionou a camada de modelo que é a camada responsável pela comunicação entre camadas
+    - PlayerModel e ClubModel
+    - Esse arquivo é uma interface que diz qual é o contrato de comunicação
+
+- Arquitetura - Camada data
+    - Camada de dados
+    - Dados serão salvos num JSON
+
+- Setup do projeto
+    - Criando projeto do zero
+    - npm i typescript tsx tsup -D
+    - Criando o arquivo .gitignore
+    - npx tsc --init (tsconfig)
+    - Configuração de scripts
+    - Configuração de .env
+
+- Utilizando express
+    - npm i express
+    - npm i --save-dev @types/express
+    - app.listen(3000)
+
+- Configurações do express
+    - Organizando a parte do express
+    - Modificar o package.json
+    - "start:dev": "tsx --env-file=.env src/server.ts"
+    - "start:watch": "tsx watch --env-file=.env src/server.ts"
+    - Utilizando middleware no express
+    - app.use(json());
+
+- Separando a server da app
+    - Criando o arquivo app.ts
+
+- Criando a camada controller
+    - Criou uma pasta para a controller
+    - Colocou o código do controller num arquivo de controller
+
+- Criando a camada de routes
+    - Adicionando arquivo routes
+    - Usando o Router do express
+
+- Criando a camada de service
+    - Pode ser criado um arquivo player-service.ts com todos os serviços relacionados a player
+    - Pode ser criado um arquivo para cada método
+    - Será criado um arquivo apenas
+
+- Criando camada de utils
+    - Camada de utils para centralizar informações
+    - Desnecessauro
+
+- Delegando responsabilidades de regras de negócio para a service
+    - Colocando resposta no service
+    - Criando o noContent
+
+- Criando a camada de repositories
+    - Passando dados para a repository
+    - database é uma variavel por enquanto
+
+- Criando a camada de models
+    - Colocando interfaces (contratos) e modelos dentro da model
+    - Tinha um HttpResponse que poderia ir para a model
+    - Dando uma arrumada no código
+
+- Get list all players
+    - Criando objeto completo com todos os dados dos jogadores
+    - Com propriedades diferentes não conseguiu criar dois modelos kkkkk
+    - Não precisou modificar em mais nenhuma classe
+
+- Get players by id
+    - O cara fala que está fácil e a aula de 15 minutos para dar um getById
+    - Route Param
+    - import * não é uma boa prática
+
+- Cadastrando um jogador
+    - Utilizando um POST
+    - Diferenciando um cadastro de acordo com verbo HTTP
+    - Faltou service e repository ainda
+
+- Ajustando o cadastro
+    - Fez um IF num controller
+    - Fica bem organizado o projeto
+
+- Implementando delete route e controller
+    - Criando route e controller para deletar
+    - Bem parecido com o getById
+
+- Implementando delete service e repository
+    - Adicionando lógica para deletar um jogador
+
+- Implementando update route e controller
+    - Atualizando os dados de um jogador
+    - Finalizando um CRUD sem banco de dados
+    - Tem que passar o id do jogador e os dados para atualização
+
+- Update implementando service e repository
+    - Mesma lógica do findIndex
+    - Depois só modificar o index encontrado
+    - Atualização funcionou corretamente
+    - Poderia colocar mais validações
+
+- Como encontrar erros mais fáceis
+    - Com o projeto organizado é mais fácil encontrar erros
+    - Atualizar o delete para retornar o status code correto quando o id não existir
+    - Tem um erro no update ainda
+
+- Criando recurso de clubs
+    - Ultimo recurso do projeto
+    - Novo arquivo
+    - Criou a estrutura toda do player mas como club
+    - Entender a arquitetura ajuda muito no desenvolvimento
+
+- Lendo arquivo json
+    - Pegando de um arquivo JSON ao inves de um array no código
+    - Não precisa mexer em nada no projeto somente na repository
+    - Utilizou o fs promises para ler o arquivo
+    - Usou novamente a IA para criar um array de clubes
+
+- Implementando cors
+    - Finalizando o projeto com CORS
+    - npm install cors
+    - npm i --save-dev @types/cors
+    - import cors from 'cors';
+    - Configuração de cors não funcionou
+    - Proximos passos seria banco de dados
