@@ -1091,3 +1091,65 @@
     - import cors from 'cors';
     - Configuração de cors não funcionou
     - Proximos passos seria banco de dados
+
+## Boas práticas de programação
+
+### Introdução a clean code
+- Introdução
+    - Código limpo é importante ou não?
+    - Passamos mais tempo entendendo o código do que desenvolvendo
+    - Cada pessoa tem seu jeito de fazer as coisas
+    - Qualquer idiota é capaz de escrever código que um computador possa entender
+    - Bons programadores escrevem código que seres humanos podem entender
+    - Martin Fowler
+    - Código mal organizado pode prejudicar a empresa por ser dificil de dar manutenção
+    - O livro é uma visão dos principais problemas da área de programação e como resolver eles
+    - Serve para qualquer linguagem
+    - Tire suas próprias conclusões sobre os assuntos
+
+- use case
+    - Exemplo de código sujo e limpo
+    - No código sujo não da para entender o que está sendo feito
+    - No código limpo você consegue entender com mais tranquilidade
+    - Um código limpo você xinga menos
+    - Fazer um código maior não é ruim desde que seja mais entendivel
+    - Deixar o código em pequenas funções é melhor para manutenção
+    - Evitar números mágicos que são números sem significado
+    - Se a leitura do seu código é fácil de ler como um livro então você tem um código limpo
+    - Mostrou o código em C#, Python e Java
+    - Mostrando o lado negativo do clean code
+    - Muitas pessoas consideram o clean code como uma regra e isso está errado
+    - Um código pode ser limpo para uma pessoa mas sujo para outra
+    - Um código limpo é um código que é entendido por todas as pessoas com facilidade
+    - Existem diferenças de padrões entre as linguagens
+    - Sempre analise os dois lados (positivo e negativo)
+    - A linguagem só é importante para o programador
+    - Para o cliente final não faz a menor diferença
+
+- guideline
+    - São regras para se seguir para desenvolver num projeto
+    - Regras para variaveis
+    - Nomes de variaveis devem ser bem descritas
+    - Não tem problema o nome ser muito longo
+    - Evitar números mágicos
+    - Todo valor precisa ter um significado
+    - Quando é uma constante deixar variavel toda em maiusculo MINHA_VARIAVEL
+    - Evitar abreviações mySD
+    - Regras para funções
+    - Apenas um proposito
+    - Nomes descritivos
+    - Função curta
+    - Limitar quantidade de parametros
+    - Refatorar função para sempre melhorar
+    - Utilizar prefixos para nomes de funções (get, do, make, create) + o que vai fazer
+
+### Boas práticas para APIs RESTful
+- Introdução ao curso
+
+- Contextualizando as APIs RESTful
+
+- As melhores boas práticas para APIs RESTful
+
+- Encerramento do curso
+
+### Contando dias e calculando médias com javascript
