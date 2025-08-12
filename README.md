@@ -1145,11 +1145,62 @@
 
 ### Boas práticas para APIs RESTful
 - Introdução ao curso
+    - Como melhorar APIs RESTful
+    - Curso da Aline Antunes
+    - Conteudo está no github
 
 - Contextualizando as APIs RESTful
+    - Explicando novamente o que é RESTful
+    - Segue tudo do REST
+    - Stateless - Servidor não precisa lembrar o que aconteceu antes
+    - SOAP, GRPC, REST, GRAPHQL
+    - Consistência, Legibilidade e Escalabilidade
+    - As boas práticas podem ser utilizadas em várias linguagens
 
-- As melhores boas práticas para APIs RESTful
+- As 7 melhores boas práticas para APIs RESTful
+    - Substantivos em rotas no plural
+    - users está correto e getUsers está incorreto
+    - Métodos HTTP
+    - A mesma rota pode ser utilizada como padrão mas com o método HTTP diferente
+    - GET /users GET /users/{id} PUT /users/{id} POST /users DELETE /users/{id}
+    - Hierarquia e aninhamento em rotas
+    - /users/{userId}/orders
+    - A hierarquia é o usuário que possui uma ordem
+    - A ordem é um subitem do usuário
+    - Nome de ações
+    - Não usar verbos nas URLs
+    - Utilize os métodos HTTP apropriados (GET, POST, PUT, DELETE)
+    - POST /createUser (Errado) POST /users (Certo)
+    - Evite redundância pois o POST já é um verbo de criação
+    - Versionamento de rotas
+    - Posibilita que existam várias versões da mesma API sem uma influenciar na outra
+    - /v1/users e /v2/users
+    - Parâmetros de consulta
+    - Usar ? e & 
+    - /users?name=filipe&email=fedispato
+    - Tratamento de erros
+    - Utilizando os status code do HTTP
+    - 1XX Informativo (Não usa nunca)
+    - 2XX Sucesso (Usa muito) (Success 200, Created 201, No Content 204)
+    - 3XX Redirecionamento (Não usa nunca)
+    - 4XX Erro de cliente (Usa muito) (Bad Request 400, Unauthorized 401, Forbidden 403, Not Found 404)
+    - 5XX Erro de servidor (Acontece muito)
 
 - Encerramento do curso
+    - Curso finalizado
 
 ### Contando dias e calculando médias com javascript
+- Essa ultima parte é um desafio que pode ser feito dentro do proprio site
+
+## Introdução a React Native
+
+### Introdução ao React Native
+- 
+
+### Configurando seu ambiente de desenvolvimento para React Native
+
+### Primeiros passos com React Native e expo
+
+### Sequenciador de senhas do Batman com React Native
+
+### Calculando juros e taxa com javascript
