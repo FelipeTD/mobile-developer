@@ -1195,11 +1195,115 @@
 ## Introdução a React Native
 
 ### Introdução ao React Native
-- 
+- Introdução
+    - Finalmente React Native
+    - Felipe Aguiar vai dar o curso
+    - Lógica de programação, HTML, CSS, Javascript
+
+- Sobre o react native
+    - É um framework javascript
+    - Permite criar app mobile
+    - Open Source do facebook
+    - Lançado em 2015
+    - React native é diferente de React
+    - Utiliza componente mobile ao inves de HTML como o React
+    - O mesmo código serve para android e IOS
+    - O React Native pode ser utilizado em outros aparelhos além do celular
+    - O XBOX também é react native
+    - Documentação oficial está em reactnative.dev
+    - nodeJS, React e React Native estão bem pertos na parte de desenvolvimento
+    - Utiliza formato JSX
+    - Facebook, Game Pass, Playstation, Teams, Outlook, Teams
+    - Microsoft contribui com o React Native
+
+- Meios de desenvolvimento
+    - Android é como se fosse um windows ou linux
+    - Android recomenda utilizar kotlin ou Java para desenvolver seus aplicativos
+    - IOS recomenda utilizar Swift
+    - Swift, Kotlin e Java são linguagens nativas para Android e IOS
+    - Linguagens nativas aproveitam a melhoria do hardware pois o hardware foi feito para utilizar aquela linguagem
+    - Os hibridos são React Native, Flutter, Xamarin, Ionic e Framework 7
+    - As linguagens hibridas foram feitas para facilitar desenvolvedores de outras areas criarem aplicativos mobile
+    - Qualquer novidade em algum aparelho vai ser implementada e funcionar primeiro na linguagem nativa
+    - Linguagem oficial tem 100% de aproveitamento de processamento e memoria
+    - É interessante utilizar linguagem nativa quando você precisa de um bom desempenho do aplicativo
+    - Para as empresas é ruim pois gera mais custo manter dois aplicativos com linguagens diferentes
+    - Precisa de duas equipes pois são linguagens diferentes
+    - Swift tem uma barreira de entrada pois você precisa de um macbook para testar
+    - Hibridos reaproveitam o que você aprendeu em outras linguagens de outras plataformas
+    - Muitas camadas de conversão no caminho
+    - Utilizam WebView que é como se fosse um navegador diferente dos nativos que realmente é um aplicativo de celular
+    - Só comece a estudar independente se for nativo ou hibrido
+    - Entender os dois mundos pode te ajudar a ser um melhor programador
+    - React Native e React são diferentes mas o React Native tem o core do React
+    - React -> JS Bundle -> Bridge -> Native UI -> Yoga
+    - Div == View
+    - Input == TextInput
 
 ### Configurando seu ambiente de desenvolvimento para React Native
+- Ambiente de codificação
+    - Preparando o ambiente de desenvolvimento
+    - Será utilizado o VSCode
+    - Adicionando extensões no VSCode
+    - Instalação de node e npm
+    - Será utilizado o powershell
+    - Sempre olhar a documentação do React Native
+    - reactnative.dev
+    - Será utilizado o expo
+
+- Expo
+    - npm i -g expo-cli
+    - expo init my-new-project
+    - Expo é uma ferramenta de produtividade
+    - npx create-expo-app my-app -t
+    - Blank (Typescript)
+    - cd my-app
+    - npm run android
+    - Explicação sobre os arquivos do projeto
+    - App.tsx é a porta de entrada do aplicativo
+    - app.json é o arquivo de configuração do aplicativo
+    - Expo possui vários comandos
+    - Precisa scanear o QR Code pelo celular para ver o app
+    - Configurar a opção W
+    - npx expo install react-dom react-native-web @expo/metro-runtime
+    - Precisa estar dentro da pasta do projeto react native
+    - Instalar aplicativo do expo no celular
+    - Deu erro para rodar o aplicativo
+    - Mesmo com o restart do projeto continuou dando erro
+    - O expo é ruim para desenvolvimento mobile
+    - Para o expo funcionar precisa estar na mesma wifi
+
+- Visualizador de celular
+    - Explicando como fazer com o Android Studio
+    - Android Studio precisa de um computador muito bom pois precisa de muito processamento
+    - Vysor permite que o seu celular seja espelhado no computador
+    - Não vou utilizar
+    - Configuração do Vysor
+    - Sobre o telefone -> informações de software -> número de compilação
+    - Nas opções de desenvolvedor precisa habilitar a depurar via usb
+    - Testando o aplicativo com Vysor e Expo
+
+- Guias rápidos
+    - Passo a passo para criar um projeto do zero
+    - Criar uma pasta nova
+    - npx create-expo-app myapp -t
+    - Blank (Typescript)
+    - cd myapp
+    - npm run start
+    - Os outros scripts funcionam mas precisa de Android Studio e muita memoria
+    - Conversando sobre os arquivos que foram criados novamente
+    - Criando a src
+    - Não ignore as documentações oficiais do React Native e Expo
+    - docs.expo.dev
 
 ### Primeiros passos com React Native e expo
+- Setup
+
+- O básico de um componente
+
+- Um mundo componentizado
+
+- Controlando estados
 
 ### Sequenciador de senhas do Batman com React Native
 
