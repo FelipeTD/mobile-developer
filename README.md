@@ -1298,12 +1298,60 @@
 
 ### Primeiros passos com React Native e expo
 - Setup
+    - Overview sobre aplicações react native
+    - npx create-expo-app green-lantern -t
+    - Blank (Typescript)
 
 - O básico de um componente
+    - Todo componente do React Native vem do React
+    - View == div
+    - Text == span ou p
+    - TextInput == input
+    - Todos esses componentes são importados do react-native
+    - Tudo dentro do react native são componentes
+    - Componentes são funções javascript que retorna dados
+    - O expo também tem alguns componentes
+    - Antigamente era utilizado paradigma de classes agora é utilizado o funcional
+    - Uma função pode retornar somente 1 componente
+    - Todos componentes tem a propriedade style={}
+    - Quando tem style={{}} é um style inline que são propriedades do CSS
+    - React Native não da suporte de CSS
+    - Simulando um h1
+    - As propriedades são camelcase
+    - É parecido com o CSS mas é um pouco diferente
+    - fontSize == font-size
+    - <Text style={styles2.titleStyle}>Dias</Text>
 
 - Um mundo componentizado
+    - Como trazer uma imagem para o app
+    - Para o React Native tudo é objeto
+    - <Image source={symbolOn} />
+    - <Image source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}></Image>
+    - Está com um erro na importação da imagem
+    - Criando um arquivo chamado index.d.ts
+    - O nome do arquivo deve ser declaration.d.ts
+    - Esse arquivo precisa ser referenciado dentro do tsconfig.json para o typescript entender ele
+    - Coloque dentro de uma tag inclue: ["declaration.d.ts",]
+    - Precisa reiniciar o typescript ou fechar e abrir novamente o VSCode
+    - Se der algum erro precisa parar a execução do projeto e executar novamente
+    - Utilizar a opção r para dar reload na aplicação no celular
+    - Criando lógica de ligado e desligado
+    - <Image source={isActive ? symbolOn : symbolOff}></Image>
+    - Criando estilos condicionais
+    - <View style={isActive ? styles.containerOn : styles.containerOff}>
+    - Funciona para estilos também
+    - Mudar o valor de isActive com toque no simbolo
+    - Utilizou o TouchableOpacity para capturar o clique
+    - Mesmo criando uma função que modifica o valor da variavel o componente continua sem atualizar por causa de gerenciamento de estado
 
 - Controlando estados
+    - Explicando gerenciamento de estado
+    - A modificação no código não é feita novamente quando você modifica o estado de uma variavel
+    - Precisa manipular um estado para refletir no celular
+    - useState (hooks)
+    - const [isActive, setIsActive] = useState(false);
+    - function handleSymbolToggle() { setIsActive(!isActive); }
+    - Existem outros controles de estado além do useState
 
 ### Sequenciador de senhas do Batman com React Native
 
