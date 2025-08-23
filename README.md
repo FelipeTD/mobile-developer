@@ -1354,5 +1354,261 @@
     - Existem outros controles de estado além do useState
 
 ### Sequenciador de senhas do Batman com React Native
+- Wayne enterprise acaba de te contratar
+    - Gerador de senhas aleatorias
+    - Aplicativo bem simples
+    - Modelo de projeto utilizado por grandes empresas
+
+- Criando o template do projeto
+    - npx create-expo-app bat-pass-app -t
+    - Blank (Typescript)
+    - cd bat-pass-app
+    - npm run start
+
+- Startando seu projeto
+    - cd bat-pass-app
+    - npm run start
+    - Para rodar no android tem que ter um emulador e apertar A
+
+- Usando emulador (OPCIONAL)
+    - Precisa de uma máquina com 16GB de ram no minimo
+    - A configuração é opcional
+    - Um emulador gastou 11GB de memoria para ser criado
+
+- Estrutura de pastas
+    - Mostrando a estrutura de um projeto react native
+    - React Native Components -> button, image
+    - Custom Components -> buttom e image (card) num mesmo componente
+    - Screens são telas
+    - Pastas criadas components e screens dentro de src
+
+- Criando sua primeira screen
+    - Tudo dentro do react native sempre vai ser um componente
+    - Screen sempre em maiusculo
+    - Criando um componente básico
+    - <Home /> para utilizar
+    - Deixou o arquivo App.tsx mais simples
+    - Arquivo Home tem duas responsabilidades que são os componentes e a estilização
+
+- Separando as responsabilidades
+    - Colocando os estilos em outro arquivo
+
+- Utilizando snippets
+    - R Component
+    - Muito bom para automatizar criação de componentes
+    - rnso -> cria um novo componente de estilização
+    - rnbc -> cria um novo componente básico do react native
+
+- Logo
+    - Criando o declaration.d.ts
+    - Criando o componente BatLogo
+    - Usando um estilo no arquivo separado e um estilo inline
+
+- Trabalhando os containers
+    - Criando uma estilização para o container onde está o logo
+    - Várias configurações de CSS
+
+- Criando um input de texto
+    - Componente BatTextInput
+    - Estilizando o TextInput
+    - Muitas configurações de CSS
+
+- Alterando o container do textinput
+    - Colocando mais CSS na View onde está o textInput
+
+- Trabalhando com botão
+    - Criando o botão que vai ter para clicar e gerar a senha aleatória
+    - Utilizou o Button
+    - Vai usar o pressable para ter mais liberdade
+
+- Criando um pressable
+    - Pressable é uma área pressionavel como se fosse um button
+    - Tem mais configurações do que o button
+
+- Personalizando um botão
+    - Colocando estilos no novo botão
+    - Somente da parte de texto do botão
+
+- Finalizando botões
+    - Colocando estilos na parte clicável do botão
+    - Precisa de um pequeno ajuste nos estilos para ficar 100%
+    - Será feito posteriormente
+
+- Agrupando componentes
+    - Retornando um fragment ao inves de View
+    - Ao fazer isso os botões estão seguindo os mesmos comportamentos da View pai
+    - Dessa forma, eles ficaram do mesmo tamanho do InputText
+    - Colocou o InputText dentro do Button retirando da Home
+    - Isso foi feito para ficar mais fácil de preencher o Input
+
+- Gerando componentes
+    - Preparando o Input para receber parametros
+    - Criando uma interface para as propriedades do componente Input
+    - Utilizando o useState no Button para declarar uma variavel
+    - Ao clicar no botão já aparece ola que foi definido na função que define a variavel
+
+- Criando um service
+    - Criando um serviço para gerar a senha aleatoria com estrutura
+    - Usando Math.random
+
+- Finalizando a parte lógica
+    - Fazendo pequenos ajustes para finalizar a parte lógica
+    - Colocando a parte do botão copy
+    - Vai usar a funcionalidade do expo
+    - npx expo install expo-clipboard
+    - import * as Clipboard from 'expo-clipboard';
+    - await Clipboard.setStringAsync(pass);
+    - Botão copy não funcionou
+
+- Concluindo
+    - Ensinou vários conceitos e o aplicativo ficou bem legal
+    - Colocar melhorias e mais opções no aplicativo
+
+- Vamos evoluir juntos
+    - Vai ter um curso somente para gerar APK
 
 ### Calculando juros e taxa com javascript
+- Essa ultima parte é um desafio que pode ser feito dentro do proprio site
+
+## Fundamentos de Apps React Native
+
+### Trabalhando com componentes no React Native
+- Introdução
+    - Porque o React Native tem tantos componentes prontos?
+    - Porque precisa funcionar corretamente num aparelho mobile
+    - É necessário conhecer os componentes básicos do React Native para se sentir seguro
+    - npx create-expo-app components-overview -t
+    - cd components-overview
+    - npm run start
+
+- Componentes Core
+    - View é o equivalente a uma div na web
+    - É como se fossem caixinhas dividindo os dados
+    - Funções que começam com on dentro da <View>
+    - onTouchStart={(event) => Alert.alert('Começou a clicar!', 'Clique iniciado')}
+    - onTouchEnd={(event) => Alert.alert('Terminou de clicar!', 'Clique finalizado')}
+    - Você consegue ver quais eventos estão disponiveis em cada componente
+    - Tem alguns gestos que estão disponiveis somente no IOS
+    - Gatilhos do <Text>
+    - Todo texto tem que ser colocado dentro de um <Text>
+    - Dá para fazer botões com o <Text>
+    - <Text selectable={true}> 
+    - Deixa o texto selecionavel
+    - <Text> com um <Text> dentro carrega o texto na mesma linha
+    - <View> com um <Text> da uma quebra de linha
+    - Stylesheet imita um CSS mas não é um CSS
+    - Da para usar mais de um estilo num componente
+    - style={[styles.texto, styles.border]}
+    - Da para usar inline também
+    - style={[styles.container, { backgroundColor: 'red' }]}
+    - onLongPress={() => Alert.alert('Clicou no texto!', 'Você clicou no texto por muito tempo!')}
+
+- Componentes com interação com o usuário
+    - Image para exibição de imagens
+    - <Image source={require('C:/projetos/1-2025/node-dio/components-overview/assets/splash-icon.png')} />
+    - import img from './assets/splash-icon.png';
+    - <Image source={img} />
+    - A tag Image também tem o style
+    - Sempre utilize a imagem do tamanho que você irá utilizar
+    - Não utilize imagens muito pesadas
+    - <TextInput 
+        style={styles.input}
+        onChangeText={text => console.log(text)}
+        keyboardType='numeric'
+        placeholder="Digite algo"
+      />
+    - keyboardType define o tipo de teclado que será aberto
+    - Explicação do useState
+    - const [nome, setNome] = useState('');
+    - <Button 
+        title="Clique aqui"
+        onPress={() => Alert.alert(nome)}
+      />
+    - <ScrollView>
+    - Permite fazer movimento de rolagem
+    - <Switch 
+          value={isEnabled}
+          onValueChange={handleSwitch}
+        >
+        </Switch>
+    - Botão de ligado desligado
+    - Usou para mostrar ou esconder a imagem
+    - style={{ display: isEnabled ? 'flex' : 'none', width: 200, height: 900, borderRadius: 100, borderWidth: 3, borderColor: 'blue' }} 
+
+- Encerramento
+    - Tem muitos outros componentes para estudar
+    - Não precisa ser expert em todos os componentes
+    - Precisa saber o básico de como os componentes funcionam
+
+### Flexbox e responsividade no React Native
+- Introdução
+    - Curso para organização de elementos na tela utilizando flexbox
+
+- Premissas
+    - É uma maneira de posicionar elementos em tela
+    - Container é quem abraça os outros elementos
+    - Os filhos estão sempre dentro dos containers (pai)
+
+- Comandos iniciais
+    - Define duas views uma vermelha e outra azul
+    - Com o flex: 1 ocupa toda a area da tela do telefone
+    - Sem o flex: 1 ocupa somente a area necessário para caber os elementos
+    - flexDirection determina a direção que os componentes serão apresentados
+    - O default é coluna
+    - justifyContent está ligado ao flexDirection
+    - alignItems é o eixo secundário
+    - alignSelf é para utilizar somente no filho para ele se diferenciar do restante dos componentes
+    - flexWrap tenta colocar o maximo de itens e depois quebra a linha e coloca abaixo
+    - alignContent utiliza somente com o flexWrap
+    - É como se fosse o alignItems do justifyContent
+    - É o responsável pelo eixo secundário
+    - flexBasis aumenta o tamanho de acordo com o flexDirection
+    - Utilizado somente em componentes filhos
+    - flexGrow aumenta o tamanho de acordo com o flexDirection o máximo que possa se expandir
+    - Utilizado somente em componentes filhos
+    - flexShrink é o contrário do flexGrow
+    - Ele reduz o tamanho de um elemento para que outro elemento tenha mais espaço para aparecer na tela
+
+- Encerramento
+    - Bastante conteúdo sobre layout responsivo com o flexbox
+    - flexboxfroggy.com para treinar flexbox
+
+### Gerenciando eventos no React Native
+- Introdução
+    - Componentes, estilização dos componentes e ações desses componentes
+    - Configurando um novo projeto
+
+- Sobre eventos
+    - Evento é alguma ação que é executada no seu componente quando alguma coisa acontece no seu componente
+    - Todo evento de um componente começa com on
+    - <Text
+        onPress={() => console.log('Hello, world!')}
+      >
+        Open up App.tsx to start working on your app!
+      </Text>
+    - Função com parametro
+    - onPress={() => handlePress(1)}
+    - Importando uma função de outro arquivo
+    - onPressIn funciona somente quando tem um onPress antes
+    - PressIn executa antes do Press
+    - PressOut é executado quando você solta o botão
+    - LongPress é quando deixa pressionado por um longo tempo
+    - Entra no lugar do onPress quando acionado
+    - onTextLayout é executado quando o componente é carregado na tela
+
+- Sobre outros eventos
+    - Cada componente tem seus eventos únicos
+    - O melhor jeito de descobrir é estudar a documentação
+    - Usando o TextInput para mais exemplos
+    - Componentes sem valor pode se auto fechar <TextInput />
+    - onFocus dispara um evento quando clica no campo
+
+### Desafio: Recrie um app de Bat Sinal
+- Passaram os dados e tem que fazer o projeto sozinho
+- WIREFRAME é uma definição dos elementos com poucas informações
+
+### Validando e formatando CPF com javascript
+- Essa ultima parte é um desafio que pode ser feito dentro do proprio site
+
+
+
