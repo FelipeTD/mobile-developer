@@ -1610,5 +1610,189 @@
 ### Validando e formatando CPF com javascript
 - Essa ultima parte é um desafio que pode ser feito dentro do proprio site
 
+## Navegabilidade no React Native
+
+### Trabalhando com hooks no react native
+- Introdução
+    - O que são hooks
+    - Existem diversos hooks
+    - Os hooks não são exclusivos do React Native
+    - Você pode utilizar eles no React
+    - São funções que ajudam no ciclo da tela
+    - Os hooks são bons para serem utilizados na programação funcional
+    - Os mais comuns são o useState e useEffect
+    - Você pode usar classes mas é melhor utilizar funções
+    - Fez uma explicação desenhando
+    - Os hooks são utilizados para ligar um aparelho com um motor javascript
+    - Os dois estão dentro do aparelho mas em lugares diferentes
+    - Eles precisam do hooks para conseguir se comunicar
+    - Um hook sempre devolve uma variavel e uma função para trabalhar com essa variavel
+
+- Captain Hook say hello
+    - Explicando o useState
+    - Para incrementar o valor anterior utilize setCount((prevState) => prevState + 1) dentro de uma função
+    - Da para fazer a mesma coisa para decrementar
+    - O nome não precisa ser prevState pode ser qualquer nome
+    - const [count, setCount] = useState(0)
+    - o setCount é uma convenção mas pode ser qualquer nome
+    - Colocou um if para não deixar numeros negativos
+    - Explicação do useEffect
+    - Utilizado para tratar efeitos colaterais
+    - useEffect(() => {
+        Alert.alert("Titulo", "Mensagem")
+      }, [count]);
+    - Ele vai ficar vigiando o count
+    - Sempre que tiver alguma alteração no count o método dentro do useEffect vai ser ativado
+    - Se não passar uma variavel para ser vigiada, sempre que acontecer alguma ação na tela o useEffect será disparado
+    - Explicação do useReducer
+    - Parecido com o useState mas é guiado por eventos
+    - const [state, dispatch] = useReducer(reducer, { counter: 0 })
+    - reducer é uma função que recebe um state e uma action
+    - const reducer = (state: { counter: number; }, action: { type: string; }) => {
+        switch (action.type) {
+            case 'increment': 
+                return {
+                    counter: state.counter + 1
+                }
+            default:
+                return state
+        }
+    }
+    - Para usar num componente se utiliza o dispatch
+    - const incrementCount = () => { dispatch({ type: 'increment' }) }
+    - Parece um useState mais complexo
+    - Utilizado quando temos várias ações associado a uma variavel de estado
+    - Dando um exemplo utilizando várias hooks para adicionar uma lista de tarefas
+    - const [state, dispatch] = useReducer(listener, { tasks:[] })
+    - Não é uma boa pratica utilizar any no typescript
+    - tasks: [...state.tasks, { name: action.inputValue, isDone: false }] o ... é um spread operator que copia todos os valores que já existem dentro de tasks para a variavel tasks
+    - Depois estamos adicionando duas propriedades name e isDone dentro do objeto tasks
+    - No dispatch({ type: "add-new-task", inputValue }) estamos passando a função que queremos executar e o valor do inputValue que será utilizado
+    - O valor fica dentro de action
+    - Fez um map para exibir as tasks
+    - {state.tasks.map((task: any) => <Text>task.name</Text>)}
+    - O name é uma propriedade que foi definida dentro de tasks
+
+- Encerramento
+    - Principais hooks são useState, useEffect e useReducer
+    - Existem outros hooks como o useRef para referência
+
+### Trabalhando com navigation no react native
+- Introdução
+    - Precisamos nos preocupar como o usuário navega pelo aplicação
+
+- Setup do projeto
+    - Criando um projeto novo para estudo
+    - expo init react-nav --npm
+    - Explicando a estrutura do projeto
+    - Telas são salvas dentro de uma pasta chamada screens
+    - Toda tela também é um componente
+    - Iniciando a aplicação no celular
+    - App.tsx chama as telas
+    - As telas ficam em arquivos separados
+
+- Conhecendo a lib
+    - React Navigation
+    - Será explicado o que é Route e Navigation
+    - npm install @react-navigation/native
+    - Também precisa instalar bibliotecas extras
+    - npx expo install react-native-screens react-native-safe-area-context
+    - Se estiver utilizando o cli e não o expo utilize o comando abaixo
+    - npm install react-native-screens react-native-safe-area-context
+
+### Trabalhando com stack navigation no react native
+- Introdução
+    - Analisando estrategias de navegação numa aplicação
+    - Stack Navigator é a mais comum
+    - Bottom Tabs também é muito comum
+    - Bottom Tabs utiliza a Golden Actions para não ficar com muitos botões
+    - Material Top Tabs seria o contrario do Bottom
+    - Drawer é um menu lateral
+    - Será implementado a Stack Navigator
+
+- Navegando
+    - Explicando navegação com desenhos
+    - Criando a pasta routes fora de src (o correto é dentro de src)
+    - O react navigation não instala tudo de uma vez
+    - Você precisa ir instalando o que você vai usar
+    - Como vamos usar stack temos que instalar a biblioteca do stack
+    - npm install @react-navigation/stack
+    - Fez toda a configuração do arquivo de rotas
+    - Preenchendo uma Screen
+    - Mais explicação com desenhos
+    - O correto é criar o Routes dentro da pasta src
+    - Criando um navigation container para mostrar as screens
+    - Usando o container no App.tsx
+    - Fazendo o efeito de navegação de uma página para outra
+    - Stack fica bem feio para um app mobile
+    - headerShown: false oculta o menu e fica mais bonito
+
+- Encerrando
+    - Ensinou o básico de navegação
+    - Aprenda o conceito pois depois fica mais fácil de aprender as outras coisas
+
+### Trabalhando com tab navigation no react native
+- Introdução
+    - Aprendendo outra estrategia de navegação
+
+- Trabalhando com Abas
+    - Navegação atras de abas no canto inferior
+    - Material top é uma variação
+    - Material Bottom Tab é outra variação
+    - npm install @react-navigation/bottom-tabs
+    - Desenvolvendo de acordo com documentação
+    - Fazendo melhorias
+
+- Trabalhando com icones
+    - Adicionando icones nos menus de tabs
+    - Foi somente isso mesmo
+    - Adição de icones nos menus
+    - Pode ser utilizado vários pacotes de icones ao mesmo tempo
+    - Site com os icones https://icons.expo.fyi/Index
+    - Não é recomendado pois os pacotes de icones seguem um padrão
+
+- Sugestões de uso
+    - Um aplicativo tem que ter funções bem definidas
+    - No máximo 5 ações quando usar navegação via tab
+    - Utilize sempre o mesmo pacote de icones
+    - Não fazer icones com muitas cores
+
+### Trabalhando com Drawer Navigation no react native
+- A minha gaveta de menus
+    - Utilizado quando a aplicação tem muitos menus
+    - npm install @react-navigation/drawer
+    - npx expo install react-native-gesture-handler react-native-reanimated
+    - import 'react-native-gesture-handler'
+    - Precisa importar dentro do index.ts da aplicação
+
+- Implementando a navegação Drawer
+    - Mesma coisa do stack navigation
+    - Tem que lembrar de importar o gesture-handler e instalar as dependencias extras
+    - Foi feita uma configuração com o babel mas no projeto nem é mais utilizado
+    - Comando para forçar a limpeza de cache da aplicação
+    - npx expo start --clear
+    - É interessante não utilizar a opção headerShown: false para deixar o menu hamburguer aparecendo
+
+- Sugestões de uso
+    - É a mais abrangente das navigations
+    - Pode ser usada com poucas ações ou com muitas ações
+    - Os usuários já estão acostumados com esse tipo de navigation nas aplicações
+    - Recomandado quando precisa de uma area mais limpa na parte de baixo
+
+### Criando seu App de Portfólio
+- Como se vender como Dev Mobile
+    - Novamente a industrias wayne kkkk
+    - Fazer um curriculo em forma de aplicativo
+
+- Briefing do APP
+    - Vai ter duas telas
+    - Tela Principal com foto, nome, linkedin, github e email
+    - Linkedin, github e email são botões clicaveis
+    - A segunda tela é a Skill Screen
+    - Nela terá foto, minhas habilidades, e fale comigo
+    - Minhas habilidades é uma lista de habilidades com um rating com estrelas
+
+- Coloque seu tempero especial
+    - Coloque algum diferencial no projeto
 
 
