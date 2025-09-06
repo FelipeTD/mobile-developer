@@ -1795,4 +1795,284 @@
 - Coloque seu tempero especial
     - Coloque algum diferencial no projeto
 
+## Gerenciando componentes com react native
 
+### Casos de usos com hooks no react native
+- Introdução
+    - Entender o que são os react hooks
+    - A ideia dos hooks é para gerenciar estados numa tela
+    - O DOM renderiza em apps web e no native renderiza em apps mobile
+    - Existe o React VR para realidade virtual
+
+- Entendendo a necessidade de hooks
+    - Criando um novo projeto para estudar hooks
+    - Criar um botão de adicionar e remover
+    - Mostrando funções sem hooks
+    - O valor é atualizado no console mas não na tela
+    - O valor não é atualizado porque toda aplicação é dividida entre Core e Native
+    - O core faz todos os calculos e funções
+    - O native exibe todos os dados
+    - O hook é necessário para um conversar com o outro
+
+- Hooks na prática
+    - Hooks estão na camada do react não do react native
+    - Explicando o useState
+    - O useState controla o estado da variavel
+    - const [quantity, setQuantity] = useState<number>(12);
+    - Tem coisas que fazem sentido estar num useState
+    - Enquanto existem valores que são fixos eternamente e não precisam de um useState
+    - Explicando o useEffect
+    - Funciona via efeito colateral
+    - useEffect(() => {
+        console.log('Quantity changed');
+      }, [quantity]);
+    - Da para usar o useEffect no jogo de tabuleiro
+    - Se não passar nenhum valor o efeito colateral vai ser executado somente 1 vez
+    - Explicando o useRef
+    - const textInputRef = useRef<TextInput>(null);
+    - const resetButton = () => {
+        textInputRef.current?.clear();
+      }
+    - Da para fazer algumas coisas de HTML com essa referência
+    - Explicando useReducer
+    - Utilizado para funções mais complexas
+    - const initialState = { textInputRefReducer: useRef<TextInput>(null) };
+    - const reducer = (state: any, action: any) => {
+        switch (action.type) {
+            case 'RESET':
+            state.textInputRefReducer.current?.clear();
+            return state;
+            default:
+            return state;
+        }
+    }
+    - const [state, dispatch] = useReducer(reducer, initialState);
+    - const resetButtonReducer = () => {
+        dispatch({ type: 'RESET' });
+    }
+    - <TextInput 
+        ref={state.textInputRefReducer}
+        placeholder='Digite aqui Reducer' 
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1, width: 200, marginBottom: 20, marginTop: 20 }}
+      />
+    - <Button title='Resetar Reducer' onPress={resetButtonReducer} />
+    - Em resumo quando um mesmo componente tem vários comportamentos você cria um reducer
+    - Existem outros hooks mas esses são os mais utilizados
+
+### Trabalhando com context API no react native
+- Introdução
+    - Entendendo controle de estado para vários dados
+    - Vai fazer um exemplo sem contexto e outro com contexto
+    - Passar o valor de uma variavel de uma tela para outra
+
+- Criando a base do projeto
+    - Criando novo projeto para estudo
+    - npx create-expo-app aula-context -t
+    - npm install @react-navigation/native
+    - npx expo install react-native-screens react-native-safe-area-context
+    - npm install @react-navigation/stack
+    - Criando arquivos para navegação
+    - Precisa passar o userName como parametro
+    - Criando os componentes da HomeScreen
+    - import { StackNavigationProp } from '@react-navigation/stack';
+    - Cria propriedades que podem ser passadas via navegação
+    - Criando os componentes da UserScreen para receber os parametros da HomeScreen
+    - Será mostrado como fazer a mesma coisa com contexto
+
+- Contextos
+    - Ao inves de cada pagina ser responsável por guardar as variaveis, todas as variaveis ficam acessiveis globalmente
+    - Todo contexto tem um provider
+    - Pegando dados do contexto
+    - Consumindo dados numa Screen
+    - Tipando o contexto para evitar erros de tipagem
+
+- Write and Read Contexts
+    - Fazendo variaveis com valores dinamicos
+    - Adicionado um valor dinamico e uma função no contexto
+    - Chamando a função save do contexto
+    - Depois de digitado o loginName fica salvo no contexto
+    - Então mesmo depois de voltar na tela e apagar o nome digitado, ele não sai do contexto por causa do IF
+
+### Como consumir API em Apps react native na prática
+- Introdução
+    - Vamos consumir uma API de carros
+
+- Setup Inicial
+    - npx create-expo-app lamborghini-garage
+    - Criando as pastas src, components, screens e apis
+
+- Criando o componente de screen
+    - Criando a GarageScreen.tsx
+    - 10 minutos para criar margens na borda para ficar mais bonito
+    - Aula foi mais CSS do que react native
+
+- Criando o componente de cardView
+    - Mostrando técnicas para organização de código
+    - Componente segregado em index, actions, props e style
+    - Criando a estilização do componente
+
+- Importando imagens
+    - Explicando todas as configurações de utilizar imagens
+    - Estilizando a imagem
+
+- Trabalhando com técnicas de sub componentes
+    - Transformando o componente de imagem como um sub-componente
+    - Sub componentes são bons de serem criados dentro de um componente como função quando ele é utilizado somente nela
+    - Quando você cria um sub componente via pasta quer dizer que ele será utilizado em mais de um lugar
+
+- Render Car Detail
+    - Trabalhando no componente de detalhes do carro
+    - Uma das desvantagens de criar sub componentes dentro do seu componente é sobrecarregar seu arquivo style
+
+- Render car image
+    - Muito bom ele passar a URL da imagem
+    - Explicando constantes para coisas repetidas
+    - Para trabalhar com React Native e consumo de API a primeira parte é construir o layout
+    - Depois consumimos a API alterando como esses componentes são preenchidos
+
+- BuyButton
+    - Criando da maneira tradicional com pastas
+    - Uma vantagem é que cada componente tem seu style
+    - Dessa forma o nome container pode se repetir para cada componente
+    - Adicionando um icone de carrinho de compras
+
+- render priceControls
+    - Criando os botões para esquerda e direita para mudar os carros exibidos
+    - Estilizando para ficar mais bonito
+
+- Criando a base das actions
+    - Fazendo somente as funções que vamos precisar para a aplicação funcionar
+    - Não precisa fazer a lógica da função nesse momento
+    - Sempre faça uma action chamar uma API
+
+- Criando uma model
+    - Precisa criar um modelo de dados para receber os dados da API
+    - Ficou dentro de props
+
+- Instalando o axios no seu projeto
+    - Adicionando o pacote de axios no projeto
+    - npm install axios
+    - Poderia utilizar outra biblioteca
+
+- Chamando uma API com o Axios
+    - Criar um arquivo por ação que quer fazer
+    - Isso é para respeitar o principio de responsabilidade unica
+    - Realizando a chamada utilizando axios
+
+- Boas práticas de arquitetura
+    - Chamadas de API tem que estar centralizadas para evitar trabalho caso seja necessário alterações
+    - Não é uma boa prática realizar a chamada da API diretamente no componente
+    - Precisa de uma camada intermediaria para realizar a chamada antes de consumir no componente
+    - API é uma fetchFunction que somente chamada a API
+    - ACTIONS é uma loadFunction que implementa regras de negocio e prepara os dados para consumo nos componentes
+    - COMPONENT renderiza os dados a partir da ACTIONS
+    - Funciona como se fosse um BFF
+    - Existem outras formas de separar camadas de aplicações
+    - O código fica mais complexo mas fica mais fácil de dar manutenção futuramente
+
+- Implementando uma load function
+    - Precisamos de um state para salvar os dados
+    - A implementação é feita do Component para o ACTIONS e finalmente a API
+
+- Trabalhando com dados dinamicamente
+    - Utilizando os dados para preencher os componentes
+
+- Criando as load functions dos buttons
+    - Trabalhando nos pontos carro anterior e próximo
+    - Faz exatamente a mesma coisa do método anterior
+    - Única diferença é que adiciona 1 ou retira 1 se clicar no botão da direita ou esquerda
+
+- Alterando a splash screen
+    - Conteudo adicional para carregamento do aplicativo quando aberto
+    - Configuração oferecida no curso não funcionou
+    - Configuração fornecida não funciona com o expo GO
+
+- Conclusão
+    - Teve muito conteudo nesse projeto
+    - Axios, atomicidade de componentes, camadas
+
+### Deploy de aplicações react native para lojas com EAS
+- Introdução
+    - Aprendendo a deixar a aplicação pronta para publicar na loja
+    - Chamado de processo de build
+    - bundle ou apk
+    - Dicas e explicações sobre build
+
+- Conhecendo o EAS
+    - O processo de build é transformar o código num APK ou instalavel
+    - O expo faz esse processo
+    - Tem como fazer o processo de build com o react native cli também
+    - Deploy é a mesma coisa de build
+    - EAS é Expo Application Service
+    - npm install --global eas-cli && npx create-expo-app
+    - EAS Build compila e coloca na nuvem
+    - Ele faz todo o processo de build com apenas 1 comando
+    - Formato do android é AAB e do iOS é IPA
+    - Todo o processo é feito na cloud
+    - EAS Submit manda para a play store
+    - Existe muitos pre-requisitos para conseguir subir uma aplicativo
+    - expo.dev/eas
+    - Explicando o site da expo para build
+    - Da para fazer muita coisa com o plano free
+    - Atualmente o site está com menos opções do que foi mostrado no video
+
+- Comandos EAS
+    - Instalando o EAS no computador
+    - npm install -g eas-cli
+    - eas login
+    - eas build 
+    - No windows ele gera somente para android
+    - Para gerar para iOS precisa estar num mackbook
+    - eas build --platform android
+    - Would you like to automatically create an EAS project for @fedispato/lamborghini-garage?
+    - Yes
+    - What would you like your Android application id to be? (Essa pergunta não foi feita)
+    - com.filipe.lamborghini-garage
+    - Generate a new Android Keystore?
+    - Yes
+    - Processo concluido
+    - Essa projeto vai para o painel do EAS
+    - Explicando como fica no painel
+
+- Pós Build
+    - Depois que o build acaba ele gera um bundle para instalação
+    - O final do link é com aab
+    - Tem como pegar esse link do painel do EAS
+    - eas submit --platform android
+    - Comando para subir sua aplicação para a Google Play Store
+    - Tem que olhar na documentação o processo para publicação
+    - Esse processo sempre é atualizado
+    - Precisa ter uma conta da Google Play Store
+    - Precisa ter uma conta dos serviços da Google
+    - Precisa rodar o comando de submit do EAS
+    - Dificilmente você irá conseguir publicar uma aplicação de estudos
+    - AAB é Android App Bundle e é utilizado somente para publicação de Apps na loja
+    - APK é para instalar no telefone diretamente
+    - Explicando como gerar o APK ao inves de AAB
+    - Dentro do eas.json
+    - "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    - eas build -p android --profile preview
+    - Comando para rodar o build para APK
+    - Gerou um arquivo de 59mb
+    - Explicando processo de atualização de versão
+    - app.json
+    - Atualizar a tag version
+    - Parece que a versão já é atualizada automaticamente quando você faz o build no EAS
+    - Para atualizar é só utilizar o mesmo comando de build
+
+## Desenvolvimento IA Powered
+
+### Introdução a engenharia de prompts
+
+### Técnicas de engenharia de prompt
+
+### Conhecendo o github copilot: Aumentando sua produtividade na programação
+
+### Configurando e usando o github copilot
+
+### Avalie este Bootcamp 2025
