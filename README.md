@@ -2068,11 +2068,169 @@
 ## Desenvolvimento IA Powered
 
 ### Introdução a engenharia de prompts
+- Introdução
+    - Porque é importante aprender engenharia de prompts
+    - É preciso fazer a pergunta certa para funcionar corretamente
+    - Não precisa ser especialista em IA
+    - Vai explicar um contexto geral sobre prompts
+
+- Visão Geral da Engenharia de prompts
+    - Utiliza arquitetura transformer para analise de texto
+    - Dividem as frases em tokens e vão tentando corelacionar os tokens até achar uma resposta
+    - Dentro de uma mesma iteração o modelo consegue manter um contexto onde ele "lembra" dos tokens anteriores
+    - É interessante fazer a pergunta novamente depois do modelo ter um contexto melhor
+    - Instrução Inicial, Contexto Adequado, Exemplos, Dados de Entrada, Formato de saída
+
+- Aplicações práticas da engenharia de prompts
+    - Instrução deve ser clara para evitar duplicidade ou interpretação errada
+    - Exemplo de prompt pronto para usar no dia a dia
+    - Exemplo de simulação de entrevista de emprego
+    - Temos que tomar cuidado com o prompt que fornecemos para evitar Prompts enviesados, Alucinações, Considerações éticas, privacidade e segurança
+    - Os modelos precisam ter os seguintes principios: Imparcialidade, Confiabilidade, Segurança, Privacidade, Inclusão, Transparência e Responsabilidade
+    - Não informe dados sensiveis para o modelo processar
+    - Utilize dados ficticios
+
+- Leve seus prompts ao próximo nível
+    - Foi somente uma introdução aos modelos de linguagens
+    - Técnicas de engenharia de prompt
+    - Parâmetros de inferência
 
 ### Técnicas de engenharia de prompt
+- Introdução
+    - Principais aplicações e componentes
+    - Aline Antunes
+
+- Conhecendo o prompt
+    - Prompt é uma instrução para um modelo de IA
+    - Prompt é um ponto de partida claro para a analise dos modelos
+    - Assistentes de voz são interações que são transformadas por IA
+    - Prompts estão presentes em diversos segmentos
+    - Educação e programação são exemplos de onde prompts são utilizados
+    - Redes sociais, blogs, pesquisas de mercado, redação persuasiva
+    - Campanhas publicitárias, automação de atendimento
+    - Aplicação em ciencia e pesquisa
+    - Design de jogos e produções artisticas 
+
+- Componentes de um prompt
+    - Instrução
+    - Exemplos (Few-shot learning)
+    - Da um exemplo de como você quer a resposta do modelo
+    - Contexto
+    - Da um comando para influenciar na resposta do modelo
+    - Imagine que você é um professor de programação
+    - Imagine que você é um guia do egito
+    - Restrições
+    - Responda em até 50 palavras
+    - Não adicione dados ficticios
+    - Conteúdo Principal
+    - É o dado relevante para o modelo executar a instrução e dar o resultado
+    - É um combinado de instruções
+    - Indicações
+    - Liste pontos principais
+    - Responde em apenas um paragrafo
+    - Parece a mesma coisa de restrições
+    - Mas como não está restringindo nada é uma indicação
+    - Formato de saída
+    - Apresente no formato JSON
+    - Conteúdo de suporte
+    - Dados que ajudam o modelo a dar uma resposta melhor
+
+- Técnicas de engenharia de prompt
+    - Utilizado para termos respostas mais uteis ao utilizar modelos de IA
+    - O processo de refinamento da pergunta é inevitavel
+    - Tecnicas e componentes são diferentes
+    - O objetivo da pratica é a proposta de um jogo
+    - Instruções claras
+    - Preparar saída
+    - Solicitação de cadeia de pensamento
+    - Pedir para fazer o passo a passo do que foi feito
+    - É necessário ter conhecimento no que estamos pedindo para ser feito para validação
+    - Especificar estrutura de saída
+    - Mesma coisa de Formato de saída
+    - Repetir instruções no final
+    - Reforçar o que foi pedido no começo
+    - Dividir a tarefa
+    - Colocar a tarefa em partes para serem resolvidas uma etapa por vez antes de passar para a próxima
+    - Adicionar sintaxe clara
+    - Utilizar listas, titulos e tabelas para organizar e facilitar as requisições
+    - Guardrails
+    - É a mesma coisa das restrições
+    - O modelo também tem uma restrição se for utilizar dados privados ou com direitos autorais
+    - Criando imagens com o copilot
 
 ### Conhecendo o github copilot: Aumentando sua produtividade na programação
+- Introdução
+    - Apresentando o copilot para ajuda no desenvolvimento
+
+- Conhecendo o github copilot
+    - Utiliza diversos modelos de IA
+    - Disponivel em vários lugares
+    - Já tem o auto complete de códigos
+    - Precisa analisar todas as sugestões que ele faz
+    - Pode configurar gratuitamente para utilizar
+    - Está presente nas IDEs mais populares
+    - No VSCode basta instalar a extensão para utilizar
+    - Utilizando para criar dados mockados
+    - Control + i abre o ask do copilot
+    - Tem como selecionar um código e pedir para explicar com a função explain
+    - Tem como gerar uma mensagem de commit automaticamente de acordo com os arquivos alterados
+    - gh copilot explain "git init"
+    - Explica o comando git init
+    - Precisa ter o github cli e o github copilot para conseguir utilizar a linha de comando
+    - Explicou como instalar e autenticar para usar na minha de comando
+    - Tem como abrir o copilot no github também
+    - Existem boas práticas para comando do copilot 
+    - Sempre olhar as novidades na documentação
+    - Falou sobre o modo agent
 
 ### Configurando e usando o github copilot
+- Instalação do Github Copilot
+    - Pablo Lopes
+    - Cloud Advocate
+    - Precisa da assinatura do Trial do Copilot
+    - Vai falar sobre disponibilidade, instalação, configuração e utilização do copilot
+    - É um facilitar de codificação
+    - Ele não faz o código para você
+    - Azure Data Studio, 
+    - IDE JetBrains (IntelliJ, Android Studio, WebStorm)
+    - Vim / NeoVim
+    - VSCode e Visual Studio
+    - XCode
+    - Outras plataformas não tem compatibilidade
+    - Instalação de copilot nas IDEs
+
+- Configurando o Github Copilot
+    - Para desabilitar clica em extensões -> disable
+    - Para desabilitar auto complete vá no menu Disable Completions
+    - O robozinho no canto inferior do VSCode mostra o status do copilot e configurações
+    - File -> Preferences -> Settings -> Extensions -> Github Copilot
+    - Da para habilitar linguagens vá no arquivo settings.json do copilot 
+    - Edite a tag github.copilot.enable
+    - Adicione a linguagem que você não quer que seja utilizado o copilot
+    - Exemplo "python": false
+    - Para trocar de contas do copilot por exemplo para quando você tem uma conta de empresa
+    - Entre no github da sua conta de empresa
+    - Na página do github clique na sua foto -> settings -> Applications -> Authorized Oauth Apps
+    - No menu copilot existem várias configurações do copilot
+    - Nesse menu você pode configurar para aceitar ou bloquear sugestões que dão match com código público
+    - Existe outra opção para permitir que outras aplicações utilize seu código para melhroar o copilot
+    - Você pode fazer signout pelo VSCode e logar na conta da empresa
+    - Você pode desabilitar feature preview caso não queira usar features que ainda estão sendo experimentadas
+    - Você pode abrir o copilot na parte de cima ou do lado direito e isso pode ser definido nos settings para saber qual é o default
+    - Você pode configurar a linguagem default de respostas do copilot também
+    - Você pode configurar mensagens de follow up para somente a primeira mensagem, nunca ou sempre
+
+- Utilizando o Github Copilot
+    - Dia a dia utilizando o copilot
+    - As vezes da erro e precisa rodar novamente
+    - Fiz um style inline no começo do arquivo
+    - Já colocou um for com vários campos
+    - Utilizou o Flask
+    - Mesmo o código sendo feito pelo copilot ele precisou entender o que ele estava fazendo
+    - Foi bem estranho de ver a programação com o uso do copilot
+    - Parece que perdeu mais tempo perguntando do que se tivesse programando sem a ajuda do copilot
+    - Tinha dois anos que não usava o Flask
+    - É bom para codigo complexo mas tem que tomar cuidado e verificar se o código está correto
 
 ### Avalie este Bootcamp 2025
+- Avaliação do bootcamp para melhorias
